@@ -7,4 +7,8 @@
 
 **Frameworks:** Angular, Django
 
-**Tools & platforms:** Git, GitHub, AWS (cloud basics), Linux
+**Tools:** Git, GitHub, AWS (cloud basics), Linux, Docker, VS Code, PyCharm, Jupyter/Colab
+
+**AI tools:** Claude, ChatGPT, GitHub Copilot, Gemini, NotebookLM
+
+**Cybersecurity tools:** Wireshark, Burp Suite, Kali Linux, Nmap
