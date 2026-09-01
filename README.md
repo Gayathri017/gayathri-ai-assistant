@@ -7,7 +7,7 @@ A personal portfolio site with an AI chatbot built into it — trained on my act
 
 ## What's here
 
-- A static portfolio site (hero, about, skills, projects, competitions, contact) with a dark terminal-inspired theme
+- A static portfolio site (home, about, skills, projects, competitions, ask-me, contact) with a dark terminal-inspired theme
 - A retrieval-augmented chatbot embedded directly in the page — it only answers from my own knowledge base, and points to my email for anything outside that
 - Everything built with free tools: GitHub Pages for hosting the site, Hugging Face Spaces for hosting the chatbot, Google Gemini's free tier for the AI, and a small open-source model for retrieval
 
