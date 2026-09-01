@@ -79,7 +79,7 @@ a { color: var(--accent); }
 
 .hero-photo {
   width: 260px;
-  height: 260px;
+  height: 350px;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
