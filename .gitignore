@@ -1,0 +1,24 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# --- Virtual environments ---
+venv/
+env/
+.venv/
+
+# --- Secrets (important: this is where your Gemini API key will live in Step 4) ---
+.env
+
+# --- This project's generated retrieval index (rebuild anytime with `python ingest.py`) ---
+index.faiss
+chunks.json
+
+# --- OS / editor clutter ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
