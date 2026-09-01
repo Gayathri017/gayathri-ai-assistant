@@ -78,7 +78,7 @@ a { color: var(--accent); }
 .hero-links a { margin-right: 14px; text-decoration: none; font-size: 0.9rem; }
 
 .hero-photo {
-  width: 260px;
+  width: 350px;
   height: 350px;
   border-radius: 12px;
   overflow: hidden;
