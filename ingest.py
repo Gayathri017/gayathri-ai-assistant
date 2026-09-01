@@ -44,7 +44,7 @@ def build_index():
     chunks = load_chunks()
     print(f"Loaded {len(chunks)} chunks from {KNOWLEDGE_DIR}/")
 
-    model = SentenceTransformer(MODEL_NAME)
+    model = SentenceTransformer(MODEL_NAME, device="cpu")
     texts = [c["text"] for c in chunks]
     embeddings = model.encode(texts, convert_to_numpy=True, show_progress_bar=True)
     embeddings = embeddings.astype("float32")

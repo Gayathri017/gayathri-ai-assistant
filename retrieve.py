@@ -25,7 +25,7 @@ _chunks = None
 def _load():
     global _model, _index, _chunks
     if _model is None:
-        _model = SentenceTransformer(MODEL_NAME)
+        _model = SentenceTransformer(MODEL_NAME, device="cpu")
         _index = faiss.read_index(str(INDEX_PATH))
         _chunks = json.loads(CHUNKS_PATH.read_text(encoding="utf-8"))
 
