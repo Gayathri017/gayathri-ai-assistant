@@ -14,13 +14,19 @@ Then open the local URL it prints (usually http://127.0.0.1:7860).
 """
 
 import gradio as gr
+import spaces
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
 from retrieve import retrieve
+from ingest import build_index, INDEX_PATH
 
 load_dotenv()
+
+if not INDEX_PATH.exists():
+    print("No index found — building one now (first run on this machine)...")
+    build_index()
 
 client = genai.Client()
 MODEL = "gemini-3.6-flash"
@@ -41,6 +47,7 @@ Rules:
 """
 
 
+@spaces.GPU
 def answer(message, history):
     chunks = retrieve(message, k=4)
     context = "\n\n---\n\n".join(f"[source: {c['source']}]\n{c['text']}" for c in chunks)
@@ -154,7 +161,7 @@ HEADER_HTML = """
 </div>
 """
 
-with gr.Blocks(theme=theme, css=CUSTOM_CSS, title="Ask Gayathri") as demo:
+with gr.Blocks(title="Ask Gayathri") as demo:
     gr.HTML(HEADER_HTML)
     gr.ChatInterface(
         fn=answer,
@@ -167,4 +174,4 @@ with gr.Blocks(theme=theme, css=CUSTOM_CSS, title="Ask Gayathri") as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(theme=theme, css=CUSTOM_CSS)
