@@ -10,8 +10,14 @@ venv/
 env/
 .venv/
 
-# --- Secrets (important: this is where your Gemini API key will live in Step 4) ---
+# --- Secrets: never commit these ---
 .env
+.env.*
+*.pem
+*.key
+*_token*
+*credentials*
+secrets.*
 
 # --- This project's generated retrieval index (rebuild anytime with `python ingest.py`) ---
 index.faiss
