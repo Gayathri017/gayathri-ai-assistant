@@ -22,6 +22,7 @@ secrets.*
 # --- This project's generated retrieval index (rebuild anytime with `python ingest.py`) ---
 index.faiss
 chunks.json
+faiss_index/
 
 # --- OS / editor clutter ---
 .DS_Store
